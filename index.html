@@ -2,513 +2,383 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#123c32">
-<title>Кыргызстан — 2050 | Будущее начинается с нас</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
-
-:root {
-  --green: #174b3b;
-  --deep: #0c2d24;
-  --light: #f4f5ee;
-  --gold: #d8c18b;
-  --text: #1b3028;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-body {
-  margin: 0;
-  font-family: 'Manrope', sans-serif;
-  color: var(--text);
-  background: #fffefa;
-  line-height: 1.7;
-}
-a { text-decoration: none; color: inherit; }
-button { font: inherit; }
-.container { width: min(1120px, 90%); margin: auto; }
-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(255,254,250,.96);
-  border-bottom: 1px solid #e1e7df;
-  backdrop-filter: blur(12px);
-}
-nav {
-  min-height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-.logo { font-weight: 800; letter-spacing: 2px; color: var(--green); }
-.logo span { color: #a88b48; }
-.navlinks { display: flex; gap: 24px; font-size: 13px; }
-.navlinks a:hover { color: #a88b48; }
-.menu {
-  display: none;
-  border: 1px solid #dce4dc;
-  background: white;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.hero {
-  min-height: 650px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  color: white;
-  background:
-    linear-gradient(90deg,rgba(5,28,22,.8),rgba(5,28,22,.2)),
-    url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85')
-    center/cover;
-}
-.hero-content { padding: 90px 0; }
-.eyebrow {
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 3px;
-  color: #a6bda9;
-  font-weight: 700;
-}
-.hero h1 {
-  font-size: clamp(48px, 8vw, 94px);
-  line-height: 1.05;
-  letter-spacing: -4px;
-  margin: 20px 0;
-}
-.hero h1 em { color: var(--gold); font-family: Georgia,serif; font-weight: 400; }
-.hero p { max-width: 560px; color: #e0e9e1; font-size: 17px; }
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 13px 20px;
-  background: white;
-  color: var(--green);
-  border: 0;
-  border-radius: 3px;
-  font-weight: 700;
-  cursor: pointer;
-}
-.btn:hover { background: var(--gold); }
-section { padding: 85px 0; }
-.intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
-h2 {
-  font-size: clamp(32px, 4vw, 52px);
-  line-height: 1.15;
-  letter-spacing: -2px;
-  margin: 10px 0 25px;
-}
-h2 em { color: var(--green); font-family: Georgia,serif; font-weight: 400; }
-.lead { font-size: 17px; }
-.muted { color: #69776e; }
-.values {
-  margin-top: 55px;
-  padding-top: 25px;
-  border-top: 1px solid #dfe5dc;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 20px;
-}
-.value { font-size: 13px; font-weight: 700; }
-.value span { display: block; color: #a88b48; margin-bottom: 8px; }
-.landscape {
-  min-height: 300px;
-  color: white;
-  display: flex;
-  align-items: end;
-  background:
-    linear-gradient(0deg,rgba(5,28,22,.6),transparent),
-    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85')
-    center/cover;
-}
-.landscape p { padding: 30px 0; font-size: 14px; letter-spacing: 1px; }
-.resources { background: var(--light); }
-.section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 30px;
-  margin-bottom: 35px;
-}
-.section-head p { max-width: 330px; color: #69776e; font-size: 14px; }
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 22px;
-}
-.card {
-  background: white;
-  border: 1px solid #e3e8e0;
-  overflow: hidden;
-  transition: transform .2s, box-shadow .2s;
-}
-.card:hover { transform: translateY(-4px); box-shadow: 0 15px 35px #153d2d12; }
-.card img { display: block; width: 100%; height: 220px; object-fit: cover; }
-.card-body { padding: 25px; }
-.number { color: #a88b48; font-size: 11px; letter-spacing: 2px; }
-.card h3 { font-size: 26px; margin: 10px 0 0; }
-.card h4 { color: var(--green); font-size: 12px; margin: 0 0 12px; }
-.card p { color: #69776e; font-size: 13px; }
-.details {
-  width: 100%;
-  text-align: left;
-  background: transparent;
-  border: 0;
-  border-top: 1px solid #e2e7df;
-  padding: 14px 0 0;
-  margin-top: 10px;
-  font-weight: 700;
-  color: var(--green);
-  cursor: pointer;
-}
-.extra { display: none; }
-.extra.open { display: block; }
-.quote {
-  color: white;
-  text-align: center;
-  background: linear-gradient(120deg,#103c2d,#255e48);
-}
-.quote blockquote {
-  max-width: 850px;
-  margin: 20px auto;
-  font-size: clamp(27px,4vw,45px);
-  line-height: 1.3;
-  letter-spacing: -1px;
-}
-.quote p { color: #d3dfd4; font-size: 13px; }
-.action-grid {
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-  gap: 60px;
-}
-.progress { color: var(--green); font-size: 40px; font-weight: 800; }
-.task {
-  display: flex;
-  gap: 13px;
-  align-items: flex-start;
-  padding: 17px 0;
-  border-bottom: 1px solid #e1e7df;
-  cursor: pointer;
-}
-.task input { margin-top: 7px; accent-color: var(--green); width: 18px; height: 18px; }
-.task strong { display: block; font-size: 13px; }
-.task small { color: #69776e; font-size: 12px; }
-.task input:checked + span strong { color: var(--green); }
-.reset {
-  margin-top: 20px;
-  padding: 10px 15px;
-  border: 1px solid #b7c8bb;
-  background: white;
-  color: var(--green);
-  cursor: pointer;
-  border-radius: 3px;
-}
-.future {
-  color: white;
-  background:
-    linear-gradient(90deg,rgba(7,35,26,.94),rgba(7,35,26,.65)),
-    url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85')
-    center/cover;
-}
-.future h2 em { color: var(--gold); }
-.future-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 25px;
-  margin: 40px 0 20px;
-}
-.future-item { border-top: 1px solid #ffffff70; padding-top: 17px; }
-.future-item span { color: var(--gold); font-size: 12px; }
-.future-item p { color: #e0e9e1; font-size: 13px; }
-.pledge { background: var(--light); }
-.pledge-box {
-  background: white;
-  padding: clamp(25px,5vw,60px);
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 40px;
-  align-items: center;
-}
-.seal {
-  width: 190px;
-  height: 190px;
-  border: 1px solid #9bb39f;
-  outline: 8px solid #e8eee5;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--green);
-}
-.seal strong { font-size: 43px; }
-.seal span { font-size: 9px; letter-spacing: 2px; }
-footer { background: var(--deep); color: white; padding: 30px 0; }
-.footer-row { display: flex; justify-content: space-between; gap: 20px; font-size: 11px; color: #c5d3c7; }
-footer .logo { color: white; }
-
-@media(max-width:760px) {
-  .container { width: 90%; }
-  .navlinks {
-    display: none;
-    position: absolute;
-    top: 72px;
-    left: 0;
-    right: 0;
-    padding: 20px 5%;
-    background: #fffefa;
-    flex-direction: column;
-    gap: 18px;
-    border-bottom: 1px solid #e1e7df;
-  }
-  .navlinks.open { display: flex; }
-  .menu { display: block; }
-  .hero { min-height: 600px; }
-  .hero h1 { letter-spacing: -2px; }
-  .intro-grid,.action-grid,.pledge-box { grid-template-columns: 1fr; gap: 25px; }
-  section { padding: 65px 0; }
-  .values { grid-template-columns: repeat(2,1fr); margin-top: 35px; }
-  .section-head { display: block; }
-  .cards { grid-template-columns: 1fr; }
-  .card img { height: 210px; }
-  .future-grid { grid-template-columns: 1fr; gap: 12px; }
-  .seal { width: 160px; height: 160px; justify-self: center; }
-  .footer-row { flex-direction: column; }
-}
-@media(prefers-reduced-motion:reduce) {
-  html { scroll-behavior: auto; }
-  *,*::before,*::after { transition: none !important; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#164b38">
+  <meta name="description" content="Кыргызстан — 2050. Будущее нашей страны начинается с нас. Экология, чистая вода, энергия и устойчивое развитие.">
+  <title>Кыргызстан — 2050 | Будущее начинается с нас</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<header>
-  <nav class="container" aria-label="Главное меню">
-    <a class="logo" href="#top">КЫРГЫЗСТАН <span>2050</span></a>
-    <div class="navlinks" id="navlinks">
-      <a href="#about">О проекте</a>
-      <a href="#resources">Наши богатства</a>
-      <a href="#action">Наш вклад</a>
-      <a href="#future">Будущее</a>
-    </div>
-    <button class="menu" id="menu" aria-expanded="false" aria-controls="navlinks">☰ Меню</button>
-  </nav>
-</header>
 
-<main id="top">
-  <section class="hero">
-    <div class="container hero-content">
-      <div class="eyebrow">Экологическая инициатива восьмиклассниц</div>
-      <h1>Кыргызстан.<br><em>Наше будущее.</em></h1>
-      <p>2050 год начинается не завтра. Он начинается с решений, которые мы принимаем сегодня.</p>
-      <a class="btn" href="#about">Открыть проект ↓</a>
-    </div>
-  </section>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="#home">КЫРГЫЗСТАН<span>2050</span></a>
 
-  <section id="about">
-    <div class="container">
-      <div class="intro-grid">
-        <div>
-          <div class="eyebrow">01 / Наша идея</div>
-          <h2>Мы любим Кыргызстан.<br><em>И хотим видеть его сильнее.</em></h2>
-        </div>
-        <div>
-          <p class="lead">Кыргызстан — это величественные горы, прозрачные озёра, быстрые реки, плодородные долины и люди, которыми мы гордимся.</p>
-          <p class="muted">Наша Родина обладает огромным потенциалом. Любовь к стране — это не только красивые слова, но и готовность беречь её природные богатства, учиться, искать решения и помогать своему сообществу.</p>
-          <p class="muted">Мы исследуем, как вода, энергетика, сельское хозяйство и экономика связаны с будущим Кыргызстана.</p>
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Открыть меню" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">О проекте</a>
+        <a href="#resources">Ресурсы</a>
+        <a href="#actions">Наши действия</a>
+        <a href="#vision">2050</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <span class="hero-label">НАШ ДОМ. НАШЕ БУДУЩЕЕ.</span>
+        <h1>Кыргызстан —<br><span>2050</span></h1>
+        <p>
+          Страна величественных гор, чистых рек и сильных людей.
+          Каким будет Кыргызстан завтра — зависит от решений,
+          которые мы принимаем сегодня.
+        </p>
+        <div class="hero-actions">
+          <a href="#about" class="btn btn-primary">Исследовать проект ↗</a>
+          <a href="#actions" class="btn btn-outline">Начать с себя</a>
         </div>
       </div>
-      <div class="values">
-        <div class="value"><span>01</span>Гордость за Родину</div>
-        <div class="value"><span>02</span>Забота о природе</div>
-        <div class="value"><span>03</span>Сила молодёжи</div>
-        <div class="value"><span>04</span>Действия каждый день</div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="landscape">
-    <div class="container"><p>НАША ПРИРОДА — НАШЕ НАСЛЕДИЕ · КЫРГЫЗСТАН</p></div>
-  </div>
-
-  <section class="resources" id="resources">
-    <div class="container">
-      <div class="section-head">
+    <section id="about">
+      <div class="container about-grid">
         <div>
-          <div class="eyebrow">02 / Что у нас есть</div>
-          <h2>Четыре богатства.<br><em>Одно общее будущее.</em></h2>
+          <span class="section-label">НАША ИДЕЯ</span>
+          <h2 class="section-title">Будущее создаётся сегодня</h2>
+          <div class="about-text">
+            <p>
+              Кыргызстан — наша родина, богатая природными ресурсами,
+              уникальными ландшафтами и культурным наследием.
+              Наши горы, озёра и реки — не только национальное
+              достояние, но и ответственность перед будущими поколениями.
+            </p>
+            <p>
+              Но изменение климата, загрязнение окружающей среды,
+              неправильное обращение с отходами и нерациональное
+              использование воды создают серьёзные вызовы.
+            </p>
+            <p>
+              Мы, школьницы, хотим показать, что даже небольшие
+              действия граждан могут стать частью больших перемен.
+            </p>
+          </div>
+          <div class="highlight">
+            Наша цель — представить Кыргызстан 2050 года:
+            экологически ответственную, современную и процветающую страну.
+          </div>
         </div>
-        <p>Природные ресурсы дают возможности. Наш выбор определяет, насколько разумно мы ими воспользуемся.</p>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=900&q=80" alt="Горная река">
-          <div class="card-body">
-            <span class="number">01 / РЕСУРС</span>
-            <h3>Вода</h3><h4>Источник жизни</h4>
-            <p>Реки, ледники и озёра важны для людей, природы, орошения и энергетики. Беречь воду — значит заботиться о будущем.</p>
-            <button class="details" aria-expanded="false">Что можно сделать ＋</button>
-            <div class="extra"><p>Устранять утечки, не загрязнять водоёмы, экономно использовать воду и поддерживать современные способы орошения.</p></div>
-          </div>
-        </article>
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt="Солнечные панели для производства энергии">
-          <div class="card-body">
-            <span class="number">02 / РЕСУРС</span>
-            <h3>Энергетика</h3><h4>Сила для развития</h4>
-            <p>Кыргызстан обладает значительным гидроэнергетическим потенциалом. Чистая энергия и энергоэффективность открывают новые возможности.</p>
-            <button class="details" aria-expanded="false">Что можно сделать ＋</button>
-            <div class="extra"><p>Выключать ненужный свет, экономить электричество и изучать технологии, которые помогают разумно использовать энергию.</p></div>
-          </div>
-        </article>
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80" alt="Зелёные сельскохозяйственные поля">
-          <div class="card-body">
-            <span class="number">03 / РЕСУРС</span>
-            <h3>Сельское хозяйство</h3><h4>Богатство нашей земли</h4>
-            <p>Пастбища, поля и труд фермеров важны для продовольствия и сельских сообществ. Здоровая почва помогает сохранить это богатство.</p>
-            <button class="details" aria-expanded="false">Что можно сделать ＋</button>
-            <div class="extra"><p>Сокращать пищевые отходы, ценить труд фермеров и поддерживать методы земледелия, которые берегут почву и воду.</p></div>
-          </div>
-        </article>
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=900&q=80" alt="Современный городской пейзаж">
-          <div class="card-body">
-            <span class="number">04 / РЕСУРС</span>
-            <h3>Экономика</h3><h4>Возможности для людей</h4>
-            <p>Инновации, ответственный бизнес и переработка отходов могут создавать рабочие места и помогать регионам развиваться.</p>
-            <button class="details" aria-expanded="false">Что можно сделать ＋</button>
-            <div class="extra"><p>Развивать цифровые навыки, поддерживать полезные местные инициативы и придумывать способы повторного использования материалов.</p></div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
 
-  <section class="quote">
-    <div class="container">
-      <div class="eyebrow">Наша главная мысль</div>
-      <blockquote>«Настоящая любовь к Родине — это не только гордиться её красотой, но и помогать сохранять её».</blockquote>
-      <p>Будущее Кыргызстана создаётся совместными усилиями.</p>
-    </div>
-  </section>
+        <img
+          class="about-image"
+          src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1000&q=85"
+          alt="Величественные горы"
+          loading="lazy">
+      </div>
+    </section>
 
-  <section id="action">
-    <div class="container action-grid">
+    <section class="nature-strip">
+      <div class="container nature-items">
+        <div class="nature-item">
+          <strong>Горы</strong>
+          <span>Природное наследие</span>
+        </div>
+        <div class="nature-item">
+          <strong>Реки и озёра</strong>
+          <span>Жизнь и вода</span>
+        </div>
+        <div class="nature-item">
+          <strong>Земля</strong>
+          <span>Основа сельского хозяйства</span>
+        </div>
+        <div class="nature-item">
+          <strong>Люди</strong>
+          <span>Главная сила страны</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources" id="resources">
+      <div class="container">
+        <span class="section-label">ЧЕТЫРЕ НАПРАВЛЕНИЯ</span>
+        <h2 class="section-title">Что определит наше будущее?</h2>
+        <p class="section-description">
+          Развитие страны зависит от того, насколько разумно мы
+          используем ресурсы, сохраняем природу и внедряем новые решения.
+        </p>
+
+        <div class="resource-grid">
+          <article class="resource-card">
+            <img
+              src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=900&q=80"
+              alt="Чистая вода в природе"
+              loading="lazy">
+            <div class="resource-content">
+              <div class="resource-icon">💧</div>
+              <h3>Вода</h3>
+              <p>
+                Вода необходима людям, сельскому хозяйству,
+                промышленности и природным экосистемам.
+              </p>
+              <button class="learn-more" aria-expanded="false">
+                Узнать больше +
+              </button>
+              <div class="resource-details">
+                <p>
+                  Будущее: экономное орошение, защита рек и озёр,
+                  очистка сточных вод и ответственное использование
+                  водных ресурсов.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="resource-card">
+            <img
+              src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=900&q=80"
+              alt="Ветряные энергетические установки"
+              loading="lazy">
+            <div class="resource-content">
+              <div class="resource-icon">⚡</div>
+              <h3>Энергия</h3>
+              <p>
+                Надёжная и доступная энергия поддерживает развитие
+                городов, школ, предприятий и технологий.
+              </p>
+              <button class="learn-more" aria-expanded="false">
+                Узнать больше +
+              </button>
+              <div class="resource-details">
+                <p>
+                  Будущее: повышение энергоэффективности,
+                  модернизация электросетей и изучение возможностей
+                  солнечной, ветровой и гидроэнергетики.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="resource-card">
+            <img
+              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80"
+              alt="Зелёные сельскохозяйственные поля"
+              loading="lazy">
+            <div class="resource-content">
+              <div class="resource-icon">🌱</div>
+              <h3>Сельское хозяйство</h3>
+              <p>
+                Плодородная земля и труд фермеров важны для
+                продовольственной безопасности страны.
+              </p>
+              <button class="learn-more" aria-expanded="false">
+                Узнать больше +
+              </button>
+              <div class="resource-details">
+                <p>
+                  Будущее: капельное орошение, защита почв,
+                  сокращение пищевых потерь и современные
+                  технологии выращивания продукции.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="resource-card">
+            <img
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80"
+              alt="Современная городская архитектура"
+              loading="lazy">
+            <div class="resource-content">
+              <div class="resource-icon">🏙️</div>
+              <h3>Экономика и технологии</h3>
+              <p>
+                Образование, инновации и ответственное производство
+                открывают новые возможности для молодёжи.
+              </p>
+              <button class="learn-more" aria-expanded="false">
+                Узнать больше +
+              </button>
+              <div class="resource-details">
+                <p>
+                  Будущее: развитие научных исследований,
+                  цифровых технологий, переработки отходов
+                  и экологически ответственного бизнеса.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-section">
+      <div class="container">
+        <blockquote>
+          «Мы не наследуем Землю у наших предков —
+          мы берём её взаймы у наших детей».
+        </blockquote>
+        <p>Наше общее будущее начинается с ответственности.</p>
+      </div>
+    </section>
+
+    <section id="actions">
+      <div class="container">
+        <span class="section-label">НАЧНИ С СЕБЯ</span>
+        <h2 class="section-title">Маленькие шаги — большие перемены</h2>
+        <p class="section-description">
+          Отметь действия, которые ты готова или готов выполнять.
+          Посмотри, сколько шагов к более чистому Кыргызстану
+          ты уже выбрал.
+        </p>
+
+        <div class="action-list">
+          <label class="action-item">
+            <input type="checkbox" class="eco-check">
+            <span>Экономить воду дома и не оставлять кран открытым без необходимости.</span>
+          </label>
+
+          <label class="action-item">
+            <input type="checkbox" class="eco-check">
+            <span>Не бросать мусор на улицах, в горах, у рек и озёр.</span>
+          </label>
+
+          <label class="action-item">
+            <input type="checkbox" class="eco-check">
+            <span>По возможности сортировать отходы и сдавать пригодные материалы на переработку.</span>
+          </label>
+
+          <label class="action-item">
+            <input type="checkbox" class="eco-check">
+            <span>Использовать многоразовую бутылку или сумку вместо одноразовых изделий.</span>
+          </label>
+
+          <label class="action-item">
+            <input type="checkbox" class="eco-check">
+            <span>Беречь деревья, растения и животных, участвовать в экологических инициативах.</span>
+          </label>
+
+          <label class="action-item">
+            <input type="checkbox" class="eco-check">
+            <span>Рассказывать друзьям и семье о том, как заботиться об окружающей среде.</span>
+          </label>
+        </div>
+
+        <div class="action-progress">
+          <div id="progressText" aria-live="polite">Выполнено: 0 из 6 действий</div>
+          <div
+            class="progress-track"
+            id="progressTrack"
+            role="progressbar"
+            aria-label="Выбранные экологические действия"
+            aria-valuemin="0"
+            aria-valuemax="6"
+            aria-valuenow="0">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+          <button class="reset-button" id="resetChecks" type="button">
+            Сбросить отметки
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="vision" id="vision">
+      <div class="container vision-grid">
+        <div>
+          <span class="section-label">НАШ ВЗГЛЯД В БУДУЩЕЕ</span>
+          <h2 class="section-title">Кыргызстан в 2050 году</h2>
+          <p>
+            Мы мечтаем о стране, где современные технологии
+            помогают сохранять природу, города становятся комфортнее,
+            а каждый ребёнок получает возможность учиться,
+            исследовать и создавать новое.
+          </p>
+
+          <div class="vision-list">
+            <div class="vision-item">
+              <span>🌿</span>
+              <div>
+                <strong>Чистая окружающая среда</strong>
+                <p>Меньше загрязнения, больше зелёных пространств и бережное отношение к природе.</p>
+              </div>
+            </div>
+
+            <div class="vision-item">
+              <span>💡</span>
+              <div>
+                <strong>Инновации и образование</strong>
+                <p>Наука, инженерия и цифровые технологии помогают решать реальные проблемы.</p>
+              </div>
+            </div>
+
+            <div class="vision-item">
+              <span>💧</span>
+              <div>
+                <strong>Ответственное использование ресурсов</strong>
+                <p>Вода, энергия и земля используются разумно, с учётом будущих поколений.</p>
+              </div>
+            </div>
+
+            <div class="vision-item">
+              <span>🤝</span>
+              <div>
+                <strong>Возможности для каждого</strong>
+                <p>Молодёжь участвует в жизни общества и вносит вклад в развитие своей страны.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img
+          class="vision-image"
+          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85"
+          alt="Горный пейзаж как символ будущего Кыргызстана"
+          loading="lazy">
+      </div>
+    </section>
+
+    <section class="pledge">
+      <div class="container">
+        <div class="pledge-content">
+          <span class="section-label">НАШЕ ОБЕЩАНИЕ</span>
+          <h2 class="section-title">Будущее в наших руках</h2>
+          <p>
+            Мы — школьницы Кыргызстана — верим, что любовь к родине
+            проявляется не только в словах, но и в поступках.
+            Сохраняя природу сегодня, мы создаём возможности
+            для счастливого завтра.
+          </p>
+          <a href="#actions" class="btn btn-primary">Мой экологический план ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
       <div>
-        <div class="eyebrow">03 / Наш вклад</div>
-        <h2>Большие перемены<br><em>начинаются с малого.</em></h2>
-        <p class="muted">Мы, школьники, тоже можем участвовать в развитии Кыргызстана. Начать можно с привычек, своего класса и района.</p>
-        <div class="progress"><span id="count">0</span><span style="font-size:17px"> / 6 шагов</span></div>
-        <p class="muted">выбрано для моего эко-плана</p>
+        <a class="logo footer-logo" href="#home">КЫРГЫЗСТАН<span>2050</span></a>
+        <p>Школьный проект об экологии и будущем нашей страны.</p>
       </div>
-      <div id="tasks">
-        <label class="task"><input type="checkbox"><span><strong>Беречь воду</strong><small>Закрывать кран и сообщать о протечках.</small></span></label>
-        <label class="task"><input type="checkbox"><span><strong>Экономить электричество</strong><small>Выключать свет и устройства, когда они не нужны.</small></span></label>
-        <label class="task"><input type="checkbox"><span><strong>Сокращать отходы</strong><small>Использовать вещи повторно и сортировать отходы, если есть условия.</small></span></label>
-        <label class="task"><input type="checkbox"><span><strong>Оставлять природу чистой</strong><small>Забирать мусор с собой после прогулок.</small></span></label>
-        <label class="task"><input type="checkbox"><span><strong>Ценить местные продукты</strong><small>Бережно относиться к еде и труду фермеров.</small></span></label>
-        <label class="task"><input type="checkbox"><span><strong>Вдохновлять других</strong><small>Предложить классу экологическую инициативу.</small></span></label>
-        <button class="reset" id="reset">Сбросить выбор ↺</button>
-        <p id="message" aria-live="polite" class="muted">Каждый шаг — обещание, которое можно превратить в действие.</p>
+
+      <div class="footer-links">
+        <a href="#about">О проекте</a>
+        <a href="#resources">Ресурсы</a>
+        <a href="#vision">Наше будущее</a>
       </div>
     </div>
-  </section>
 
-  <section class="future" id="future">
-    <div class="container">
-      <div class="eyebrow">04 / Взгляд в будущее</div>
-      <h2>Каким мы видим<br>Кыргызстан в <em>2050?</em></h2>
-      <div class="future-grid">
-        <div class="future-item"><span>01 / ПРИРОДА</span><p>Чистые реки, бережное отношение к воде и сохранённые природные богатства.</p></div>
-        <div class="future-item"><span>02 / ТЕХНОЛОГИИ</span><p>Современная энергетика и ответственное использование ресурсов.</p></div>
-        <div class="future-item"><span>03 / ЛЮДИ</span><p>Сильные сообщества, возможности для молодёжи и развитие регионов.</p></div>
-      </div>
-      <p style="max-width:650px;color:#d3dfd4">Это наше видение, а не готовый прогноз. Чтобы приблизить его, нужны знания, сотрудничество и действия уже сегодня.</p>
-      <a class="btn" href="#pledge">Наше обещание ↓</a>
+    <div class="container copyright">
+      © 2026 · Кыргызстан — 2050 · Будущее начинается с нас
     </div>
-  </section>
+  </footer>
 
-  <section class="pledge" id="pledge">
-    <div class="container pledge-box">
-      <div>
-        <div class="eyebrow">05 / Наше обещание</div>
-        <h2>Кыргызстан — наш дом.<br><em>Его будущее — наша ответственность.</em></h2>
-        <p class="muted">Мы — восьмиклассницы, и мы верим, что возраст не мешает приносить пользу. Мы можем учиться, объединяться, задавать вопросы и предлагать идеи, которые делают нашу страну лучше.</p>
-        <p class="muted">С уважением и любовью к Кыргызстану,<br><strong>команда школьного проекта «Кыргызстан — 2050»</strong></p>
-      </div>
-      <div class="seal" aria-label="Кыргызстан 2050"><span>КЫРГЫЗСТАН</span><strong>2050</strong><span>БУДУЩЕЕ НАЧИНАЕТСЯ С НАС</span></div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container footer-row">
-    <a class="logo" href="#top">КЫРГЫЗСТАН <span>2050</span></a>
-    <span>Гордиться. Беречь. Создавать.</span>
-    <span>С заботой о будущем Кыргызстана 🇰🇬</span>
-  </div>
-</footer>
-
-<script>
-const menu = document.getElementById('menu');
-const navlinks = document.getElementById('navlinks');
-
-menu.addEventListener('click', () => {
-  const open = navlinks.classList.toggle('open');
-  menu.setAttribute('aria-expanded', String(open));
-  menu.textContent = open ? '✕ Закрыть' : '☰ Меню';
-});
-
-navlinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navlinks.classList.remove('open');
-    menu.setAttribute('aria-expanded', 'false');
-    menu.textContent = '☰ Меню';
-  });
-});
-
-document.querySelectorAll('.details').forEach(button => {
-  button.addEventListener('click', () => {
-    const panel = button.nextElementSibling;
-    const open = panel.classList.toggle('open');
-    button.setAttribute('aria-expanded', String(open));
-    button.textContent = open ? 'Скрыть подсказку −' : 'Что можно сделать ＋';
-  });
-});
-
-const checks = [...document.querySelectorAll('#tasks input[type="checkbox"]')];
-const count = document.getElementById('count');
-const message = document.getElementById('message');
-
-function updatePlan() {
-  const selected = checks.filter(c => c.checked).length;
-  count.textContent = selected;
-
-  if (selected === 0) {
-    message.textContent = 'Каждый шаг — обещание, которое можно превратить в действие.';
-  } else if (selected === checks.length) {
-    message.textContent = 'Отличный план! Начни с одного шага и постепенно превращай остальные в привычки.';
-  } else {
-    message.textContent = 'Уже выбрано шагов: ' + selected + '. Даже небольшие действия имеют значение!';
-  }
-}
-
-checks.forEach(c => c.addEventListener('change', updatePlan));
-
-document.getElementById('reset').addEventListener('click', () => {
-  checks.forEach(c => c.checked = false);
-  updatePlan();
-});
-</script>
 </body>
 </html>
+
