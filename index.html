@@ -4,239 +4,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f7f6ed">
-  <meta name="description" content="Кыргызстан — 2050. Молодёжный экологический проект о воде, ледниках, воздухе, отходах и будущем нашей страны.">
-  <title>Кыргызстан — 2050 | Экология будущего</title>
+  <meta name="theme-color" content="#f7f6eb">
+  <meta name="description" content="Кыргызстан — 2050. Молодёжь за экологическое будущее.">
+  <title>Кыргызстан — 2050</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <header class="header">
-    <a class="brand" href="#home" aria-label="Кыргызстан — 2050, главная">
-      <span class="brand-icon">🌿</span>
-      <span><strong>Кыргызстан — 2050</strong><small>Молодёжь за экологичное будущее</small></span>
+    <a class="brand" href="#home">
+      <span class="logo">🌿</span>
+      <span><strong>Кыргызстан — 2050</strong><small>Молодёжь за экологическое будущее</small></span>
     </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
-    <nav class="navigation" id="navigation">
-      <a href="#home">Главная</a>
-      <a href="#about">О проекте</a>
-      <a href="#problems">Проблемы</a>
-      <a href="#solutions">Решения</a>
-      <a href="#ecoai">EcoAI</a>
-      <a href="#team">Мы</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">☰</button>
+    <nav id="nav">
+      <a href="#home">Главная</a><a href="#about">О проекте</a>
+      <a href="#problems">Проблемы</a><a href="#solutions">Решения</a>
+      <a href="#actions">Действия</a><a href="#team">Мы</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero section-wrap" id="home">
-      <div class="hero-copy">
-        <span class="eyebrow">НАШЕ БУДУЩЕЕ НАЧИНАЕТСЯ СЕГОДНЯ</span>
-        <h1>Кыргызстан — <span>2050</span></h1>
-        <p class="hero-lead">Чистая природа. Бережное отношение к ресурсам. Ответственное поколение.</p>
-        <p>Мы исследуем экологические проблемы Кыргызстана и показываем, какие решения доступны каждому из нас.</p>
-        <div class="hero-buttons">
-          <a class="button button-primary" href="#problems">Изучить проблемы</a>
-          <a class="button button-light" href="#ecoai">Спросить EcoAI ↗</a>
+    <section class="hero" id="home">
+      <aside class="left-column">
+        <div class="speech">
+          <span class="leaf-decor">🌿</span>
+          <h2>Привет! Я Тамина — эко-волонтёр.</h2>
+          <p>Я помогу тебе узнать, как сортировать отходы, экономить воду и делать маленькие шаги для больших перемен.</p>
         </div>
-        <div class="hero-note">🌱 Маленькие действия сегодня — большие перемены завтра.</div>
-      </div>
-      <div class="hero-art" role="img" aria-label="Иллюстрация зелёных гор, озера и природы Кыргызстана">
-        <div class="sun"></div>
-        <div class="mountain mountain-back"></div>
-        <div class="mountain mountain-front"></div>
-        <div class="lake"></div>
-        <div class="art-label">Береги то, что делает Кыргызстан особенным</div>
-      </div>
-    </section>
-
-    <section class="intro section-wrap" id="about">
-      <div class="section-heading">
-        <span class="eyebrow">НАША ЦЕЛЬ</span>
-        <h2>Каким мы хотим видеть Кыргызстан в 2050 году?</h2>
-        <p>Страну, где чистая вода доступна людям, города дышат более чистым воздухом, отходы не загрязняют природу, а природные богатства сохраняются для будущих поколений.</p>
-      </div>
-      <div class="values-grid">
-        <article class="value-card"><span>💧</span><h3>Чистая вода</h3><p>Бережно относиться к рекам, озёрам и водным ресурсам.</p></article>
-        <article class="value-card"><span>🏔️</span><h3>Живые горы</h3><p>Изучать изменения ледников и защищать горные экосистемы.</p></article>
-        <article class="value-card"><span>🌬️</span><h3>Чистый воздух</h3><p>Поддерживать решения, которые помогают уменьшать загрязнение.</p></article>
-        <article class="value-card"><span>♻️</span><h3>Меньше отходов</h3><p>Повторно использовать вещи и сортировать то, что принимают на переработку.</p></article>
-      </div>
-    </section>
-
-    <section class="section-wrap problems-section" id="problems">
-      <div class="section-heading">
-        <span class="eyebrow">УЗНАЙ БОЛЬШЕ</span>
-        <h2>Экологические проблемы</h2>
-        <p>У каждой проблемы есть причины, последствия и возможные решения. Для важных выводов необходимо проверять местные данные.</p>
-      </div>
-      <div class="problems-grid">
-        <article class="problem-card">
-          <div class="problem-visual visual-water">💧</div>
-          <div class="card-content"><span class="card-tag">ВОДА</span><h3>Водные ресурсы</h3><p>Вода необходима людям, сельскому хозяйству и природным экосистемам. Загрязнение, потери и неэффективное использование могут усиливать местные проблемы с водоснабжением.</p><h4>Что можно сделать?</h4><p>Устранять протечки, не загрязнять водоёмы, бережно использовать воду и поддерживать её очистку.</p></div>
-        </article>
-        <article class="problem-card">
-          <div class="problem-visual visual-glacier">🏔️</div>
-          <div class="card-content"><span class="card-tag">КЛИМАТ</span><h3>Ледники и горы</h3><p>Изменение климата влияет на ледники и горные экосистемы. Последствия могут различаться в зависимости от района и времени.</p><h4>Что можно сделать?</h4><p>Изучать научные наблюдения, сокращать лишние отходы и поддерживать решения по снижению выбросов.</p></div>
-        </article>
-        <article class="problem-card">
-          <div class="problem-visual visual-air">🌫️</div>
-          <div class="card-content"><span class="card-tag">ВОЗДУХ</span><h3>Загрязнение воздуха</h3><p>На качество воздуха могут влиять отопление, транспорт, пыль и промышленные выбросы. Источники зависят от места и сезона.</p><h4>Что можно сделать?</h4><p>Следить за данными мониторинга, поддерживать более чистое отопление, общественный транспорт и озеленение.</p></div>
-        </article>
-        <article class="problem-card">
-          <div class="problem-visual visual-waste">♻️</div>
-          <div class="card-content"><span class="card-tag">ОТХОДЫ</span><h3>Мусор и переработка</h3><p>Смешанные отходы занимают место на полигонах, а мусор, оставленный на природе, может вредить животным и загрязнять почву и воду.</p><h4>Что можно сделать?</h4><p>Покупать осознанно, использовать вещи повторно, сортировать отходы и уточнять, что принимают местные пункты переработки.</p></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="waste-guide section-wrap" id="waste">
-      <div class="section-heading">
-        <span class="eyebrow">ПРАКТИЧЕСКИЙ ГИД</span>
-        <h2>Как сортировать отходы?</h2>
-        <p>Правила приёма отличаются в разных городах. Перед сдачей материалов проверь требования местного пункта приёма.</p>
-      </div>
-      <div class="waste-grid">
-        <article class="waste-item"><span>📄</span><h3>Бумага и картон</h3><p>Если принимаются, сдавай сухими и чистыми. Жирная или сильно загрязнённая бумага часто не подходит для переработки.</p></article>
-        <article class="waste-item"><span>🥤</span><h3>Пластик</h3><p>Проверь маркировку и местные правила. Не каждый вид пластика принимают на переработку.</p></article>
-        <article class="waste-item"><span>🍾</span><h3>Стекло</h3><p>Узнай, какие виды стекла принимают. Лампочки и жаропрочное стекло обычно собирают отдельно.</p></article>
-        <article class="waste-item"><span>🥫</span><h3>Металл</h3><p>Банки и некоторые металлические упаковки могут перерабатываться. Уточни правила приёма.</p></article>
-        <article class="waste-item"><span>🍎</span><h3>Органические отходы</h3><p>Остатки растительной пищи можно компостировать там, где для этого есть подходящие условия.</p></article>
-        <article class="waste-item"><span>🔋</span><h3>Батарейки и электроника</h3><p>Не выбрасывай их вместе с обычным мусором, если доступен специальный пункт сбора. Храни безопасно и следуй местным инструкциям.</p></article>
-      </div>
-      <div class="tip-banner"><strong>Главное правило:</strong> сначала сокращай количество отходов и используй вещи повторно, а затем сортируй то, что действительно принимают.</div>
-    </section>
-
-    <section class="future-section">
-      <div class="section-wrap future-layout">
-        <div>
-          <span class="eyebrow">ВЗГЛЯД ВПЕРЁД</span>
-          <h2>Два возможных сценария будущего</h2>
-          <p>Это не точные прогнозы, а иллюстрации того, почему решения важны. Реальное будущее зависит от множества факторов.</p>
+        <div class="tips">
+          <div><span>♻</span><p>Сортируй<br>отходы</p></div>
+          <div><span>♧</span><p>Экономь<br>воду</p></div>
+          <div><span>♧</span><p>Выбирай<br>экологичное</p></div>
+          <div><span>♡</span><p>Делай добро<br>для природы</p></div>
         </div>
-        <div class="future-grid">
-          <article class="future-card future-risk"><span>⚠️</span><h3>Если бездействовать</h3><p>Проблемы с отходами могут накапливаться, загрязнение — оставаться без решения, а природные территории — испытывать дополнительную нагрузку.</p></article>
-          <article class="future-card future-hope"><span>🌿</span><h3>Если действовать вместе</h3><p>Продуманный сбор отходов, чистые технологии, бережное использование воды и экологическое образование могут помочь улучшить условия жизни.</p></article>
+      </aside>
+
+      <div class="characters">
+        <img src="images/eco-team.png" alt="Тамина и Байастан — юные эко-волонтёры">
+        <span class="photo-label">Вместе за зелёное будущее</span>
+      </div>
+
+      <aside class="right-column">
+        <div class="speech">
+          <span class="mountain-decor">⛰</span>
+          <h2>Привет! Я Байастан — эко-исследователь.</h2>
+          <p>Я расскажу тебе о проблемах Кыргызстана, покажу факты и помогу найти решения. Вместе мы можем больше!</p>
         </div>
-      </div>
-    </section>
 
-    <section class="solutions-section section-wrap" id="solutions">
-      <div class="section-heading">
-        <span class="eyebrow">НАЧНИ С МАЛОГО</span>
-        <h2>Что можем сделать мы?</h2>
-        <p>Не обязательно решать все проблемы сразу. Начни с одного полезного действия.</p>
-      </div>
-      <div class="solutions-grid">
-        <article class="solution-card"><span>🚰</span><h3>Экономь воду</h3><p>Закрывай кран, когда вода не нужна, и сообщай взрослым о протечках.</p></article>
-        <article class="solution-card"><span>🛍️</span><h3>Используй повторно</h3><p>Бери многоразовую сумку и бутылку, когда это удобно и безопасно.</p></article>
-        <article class="solution-card"><span>🧤</span><h3>Участвуй в уборке</h3><p>Присоединяйся к организованным акциям вместе со взрослыми и соблюдай безопасность.</p></article>
-        <article class="solution-card"><span>📚</span><h3>Проверяй факты</h3><p>Ищи данные у научных организаций и государственных источников, а не только в публикациях соцсетей.</p></article>
-      </div>
-    </section>
-
-    <section class="checklist-section section-wrap">
-      <div class="checklist-panel">
-        <div><span class="eyebrow">МОЙ ЭКОПЛАН</span><h2>Мои действия на этой неделе</h2><p>Отмечай выполненные пункты. Прогресс сохраняется в браузере этого устройства.</p></div>
-        <div class="checklist" id="checklist">
-          <label><input type="checkbox" value="water"> Я бережно использовал(а) воду.</label>
-          <label><input type="checkbox" value="waste"> Я не оставлял(а) мусор на природе.</label>
-          <label><input type="checkbox" value="reuse"> Я повторно использовал(а) вещь или упаковку.</label>
-          <label><input type="checkbox" value="learn"> Я узнал(а) один новый факт об экологии.</label>
-          <label><input type="checkbox" value="share"> Я поделился/поделилась полезной идеей.</label>
-        </div>
-        <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
-        <p id="progressText">Выполнено: 0 из 5</p>
-        <button class="button button-light" id="resetChecklist" type="button">Сбросить отметки</button>
-      </div>
-    </section>
-
-    <section class="ecoai-section section-wrap" id="ecoai">
-      <div class="section-heading">
-        <span class="eyebrow">ЭКОЛОГИЯ + ТЕХНОЛОГИИ</span>
-        <h2>EcoAI Кыргызстан</h2>
-        <p>Выбирай тему или напиши вопрос своими словами. Помощник поможет разобраться в основных экологических понятиях.</p>
-      </div>
-      <div class="ecoai-layout">
-        <aside class="ecoai-intro">
-          <div class="robot-art">🌿🤖</div>
-          <h3>Привет! Я EcoAI</h3>
-          <p>Я помогу тебе узнать о природе Кыргызстана, понять причины экологических проблем и найти идеи для действий.</p>
-          <div class="ecoai-note">Не знаешь, как сформулировать вопрос? Пиши как умеешь — вместе попробуем его уточнить.</div>
-        </aside>
-        <div class="ecoai-chat">
-          <div class="chat-header"><span class="status-dot"></span><div><strong>EcoAI помощник</strong><small>Демонстрационная версия</small></div><button type="button" id="clearChat" class="clear-chat">Очистить</button></div>
-          <div class="chat-messages" id="chatMessages" aria-live="polite">
-            <div class="message bot-message">Салам! 🌱 О чём хочешь узнать? Выбери готовую тему или задай свой вопрос.</div>
-          </div>
-          <div class="chat-templates">
-            <button type="button" data-topic="waste">♻️ Сортировка отходов</button>
-            <button type="button" data-topic="water">💧 Вода</button>
-            <button type="button" data-topic="glaciers">🏔️ Ледники</button>
-            <button type="button" data-topic="air">🌫️ Воздух</button>
-            <button type="button" data-topic="region">📍 Мой регион</button>
-            <button type="button" data-topic="actions">🌱 Мои действия</button>
-          </div>
-          <form class="chat-form" id="chatForm">
-            <label class="visually-hidden" for="chatInput">Твой вопрос</label>
-            <textarea id="chatInput" rows="2" maxlength="500" placeholder="Например: почему загрязняется воздух?" required></textarea>
-            <button class="button button-primary" type="submit">Спросить ↗</button>
+        <div class="ai-card">
+          <div class="ai-robot">🤖</div>
+          <span class="pill">✦ AI-ассистент</span>
+          <h2>Задай вопрос об экологических проблемах</h2>
+          <p>Наш помощник предложит полезные идеи, которые можно применить уже сегодня.</p>
+          <form id="ecoForm">
+            <input id="ecoQuestion" type="text" placeholder="Напиши свой вопрос..." required>
+            <button type="submit" aria-label="Отправить вопрос">→</button>
           </form>
-          <p class="disclaimer">Это прототип с подготовленными ответами, а не подключённая языковая модель. Он может ошибаться и не заменяет проверку источников.</p>
+          <div class="quick-questions">
+            <button type="button" data-question="Как сортировать отходы?">Отходы</button>
+            <button type="button" data-question="Как экономить воду?">Вода</button>
+            <button type="button" data-question="Как беречь воздух?">Воздух</button>
+            <button type="button" data-question="Почему тают ледники?">Ледники</button>
+          </div>
+          <p id="ecoAnswer" class="answer" aria-live="polite"></p>
+          <small>Демонстрационный помощник с готовыми ответами.</small>
         </div>
+      </aside>
+    </section>
+
+    <section class="banner" id="about">
+      <div class="landscape" role="img" aria-label="Горы и озеро Кыргызстана"></div>
+      <div class="banner-copy">
+        <span class="eyebrow">НАШ ОБЩИЙ ДОМ</span>
+        <h2>Кыргызстан — наша общая ответственность</h2>
+        <p>Чистая природа, здоровые люди и устойчивое будущее возможны, если каждый из нас начнёт с малого.</p>
+      </div>
+      <div class="banner-sign">Вместе ♡<br>к 2050</div>
+    </section>
+
+    <section class="section" id="problems">
+      <div class="section-title">
+        <span class="eyebrow">ЧТО НАС ВОЛНУЕТ</span>
+        <h2>Экологические проблемы</h2>
+        <p>Чтобы защитить природу, сначала нужно понять, с какими трудностями мы сталкиваемся.</p>
+      </div>
+      <div class="problem-grid">
+        <article class="problem-card"><span>💧</span><h3>Вода и ледники</h3><p>Изменение климата влияет на ледники и водные ресурсы, важные для жителей и сельского хозяйства.</p></article>
+        <article class="problem-card"><span>☁</span><h3>Загрязнение воздуха</h3><p>На качество воздуха влияют отопление, транспорт, пыль и другие источники загрязнения.</p></article>
+        <article class="problem-card"><span>♻</span><h3>Отходы</h3><p>Мусор, который не собирают и не перерабатывают правильно, загрязняет окружающую среду.</p></article>
+        <article class="problem-card"><span>🌱</span><h3>Природные экосистемы</h3><p>Леса, пастбища, почва и животные нуждаются в защите и бережном отношении.</p></article>
       </div>
     </section>
 
-    <section class="team-section section-wrap" id="team">
-      <div class="section-heading">
+    <section class="lower-grid">
+      <div class="lower-panel" id="solutions">
+        <span class="eyebrow">МАЛЕНЬКИЕ ШАГИ</span>
+        <h2>Решения начинаются с действий</h2>
+        <div class="solution"><b>01</b><div><strong>Сортируй отходы</strong><p>Узнай, какие материалы принимают на переработку рядом с тобой.</p></div></div>
+        <div class="solution"><b>02</b><div><strong>Экономь воду</strong><p>Закрывай кран и сообщай о протечках взрослым.</p></div></div>
+        <div class="solution"><b>03</b><div><strong>Выбирай разумно</strong><p>Используй вещи повторно, если это возможно.</p></div></div>
+        <div class="solution"><b>04</b><div><strong>Рассказывай другим</strong><p>Делись проверенной экологической информацией.</p></div></div>
+      </div>
+
+      <div class="lower-panel checklist-panel" id="actions">
+        <span class="eyebrow">ТВОЙ ЭКО-ЧЕКЛИСТ</span>
+        <h2>Что ты сделаешь сегодня?</h2>
+        <p>Отмечай действия — каждый шаг имеет значение.</p>
+        <label><input type="checkbox"> Я не оставлю мусор после себя.</label>
+        <label><input type="checkbox"> Я постараюсь экономить воду.</label>
+        <label><input type="checkbox"> Я использую многоразовую сумку или бутылку.</label>
+        <label><input type="checkbox"> Я поделюсь полезной экологической привычкой.</label>
+        <div class="progress-track"><div id="progressBar"></div></div>
+        <strong id="progressText">Выполнено: 0 из 4</strong>
+      </div>
+
+      <div class="lower-panel team-panel" id="team">
         <span class="eyebrow">НАША КОМАНДА</span>
-        <h2>Знакомься с эко-помощниками</h2>
-        <p>Персонажи помогают изучать экологию и напоминают: забота о природе начинается с каждого из нас.</p>
-      </div>
-      <div class="team-grid">
-        <article class="team-card">
-          <div class="team-avatar avatar-tamina">🌿</div>
-          <span class="team-role">ЭКО-ВОЛОНТЁР</span>
-          <h3>Тамина</h3>
-          <p>Привет! Я Тамина, эко-волонтёр. Я помогу тебе узнать, как сортировать отходы, экономить воду и заботиться о природе.</p>
-        </article>
-        <article class="team-card">
-          <div class="team-avatar avatar-baiastan">🏔️</div>
-          <span class="team-role">ЭКО-ИССЛЕДОВАТЕЛЬ</span>
-          <h3>Байастан</h3>
-          <p>Привет! Я Байастан. Я расскажу тебе об экологических проблемах Кыргызстана, объясню сложные вещи и помогу искать решения.</p>
-        </article>
-      </div>
-      <div class="about-author">
-        <span class="eyebrow">О СОЗДАТЕЛЕ ПРОЕКТА</span>
-        <h3>Разработала: Тамина Амангельдыева</h3>
-        <p>Этот школьный проект создан, чтобы привлечь внимание к экологическим проблемам Кыргызстана и показать, как знания и небольшие действия могут помогать природе.</p>
-        <p class="author-motto">«Будущее Кыргызстана начинается с наших действий сегодня».</p>
+        <h2>Знакомься с нами</h2>
+        <p>Мы верим, что знания и совместные действия помогают беречь природу.</p>
+        <div class="team-mini">
+          <div><img src="images/eco-team.png" alt="Тамина" class="girl-crop"><strong>Тамина</strong><small>Эко-волонтёр</small></div>
+          <div><img src="images/eco-team.png" alt="Байастан" class="boy-crop"><strong>Байастан</strong><small>Эко-исследователь</small></div>
+        </div>
+        <p class="author">Автор проекта: <strong>Тамина Амангельдыева</strong></p>
       </div>
     </section>
 
-    <section class="sources-section section-wrap" id="sources">
-      <div class="section-heading">
-        <span class="eyebrow">ИЗУЧАЙ И ПРОВЕРЯЙ</span>
-        <h2>Полезные источники</h2>
-        <p>Используй научные и официальные материалы, чтобы проверять сведения и узнавать больше.</p>
-      </div>
-      <ul class="sources-list">
-        <li><a href="https://www.unep.org/" target="_blank" rel="noopener noreferrer">Программа ООН по окружающей среде (UNEP)</a></li>
-        <li><a href="https://www.worldbank.org/en/country/kyrgyzrepublic" target="_blank" rel="noopener noreferrer">Всемирный банк — Кыргызстан</a></li>
-        <li><a href="https://www.ipcc.ch/" target="_blank" rel="noopener noreferrer">Межправительственная группа экспертов по изменению климата (IPCC)</a></li>
-        <li><a href="https://stat.gov.kg/" target="_blank" rel="noopener noreferrer">Национальный статистический комитет Кыргызской Республики</a></li>
-      </ul>
-      <p class="source-note">Перед использованием статистики добавляй конкретный источник, год публикации и ссылку на соответствующий отчёт.</p>
+    <section class="sources">
+      <h2>Проверяй факты</h2>
+      <p>Для изучения экологии используй официальные и научные источники:</p>
+      <a href="https://www.meteo.kg/" target="_blank" rel="noopener">Кыргызгидромет</a>
+      <a href="https://www.unep.org/" target="_blank" rel="noopener">Программа ООН по окружающей среде</a>
+      <a href="https://www.worldbank.org/en/country/kyrgyzrepublic" target="_blank" rel="noopener">Всемирный банк: Кыргызстан</a>
     </section>
   </main>
 
-  <footer class="footer">
-    <a class="brand footer-brand" href="#home"><span class="brand-icon">🌿</span><span><strong>Кыргызстан — 2050</strong><small>Молодёжь за экологичное будущее</small></span></a>
-    <p>Создано с заботой о природе Кыргызстана.</p>
-    <p>© <span id="currentYear"></span> · Учебный экологический проект</p>
+  <footer>
+    <strong>🌿 Кыргызстан — 2050</strong>
+    <span>Будущее начинается с наших решений.</span>
+    <small>Учебный экологический проект</small>
   </footer>
-
-  <button id="backToTop" class="back-to-top" type="button" aria-label="Наверх">↑</button>
 </body>
 </html>
 
