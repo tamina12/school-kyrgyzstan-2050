@@ -2,596 +2,586 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Кыргызстан — 2050 | Экологическое будущее</title>
-
-    <meta name="description"
-          content="Молодёжный экологический проект Кыргызстан — 2050. Вместе создаём чистое и устойчивое будущее нашей страны.">
-
-    <meta name="theme-color" content="#f5f8ed">
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Кыргызстан — 2050. Молодёжный экологический проект о воде, климате, отходах, природе и устойчивом будущем Кыргызстана.">
+  <meta name="theme-color" content="#f7f8ef">
+  <title>Кыргызстан — 2050 | Будущее в наших руках</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://images.unsplash.com">
 </head>
-
 <body>
 
-    <!-- ШАПКА САЙТА -->
-    <header class="header">
-        <div class="container nav-container">
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Кыргызстан 2050 — главная">
+      <span class="brand-icon">🌿</span>
+      <span>КЫРГЫЗСТАН <b>2050</b></span>
+    </a>
 
-            <a href="#home" class="logo">
-                <span class="logo-icon">🌱</span>
-                <span>
-                    <strong>КЫРГЫЗСТАН</strong>
-                    <small>2050 · ECO PROJECT</small>
-                </span>
-            </a>
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-            <button class="menu-toggle"
-                    id="menuToggle"
-                    aria-label="Открыть меню"
-                    aria-expanded="false">
-                ☰
-            </button>
+    <nav class="navigation" id="navigation">
+      <a href="#about">О проекте</a>
+      <a href="#problems">Проблемы</a>
+      <a href="#future">2050</a>
+      <a href="#actions">Наши действия</a>
+      <a href="#sources">Источники</a>
+    </nav>
+  </header>
 
-            <nav class="navigation" id="navigation">
-                <a href="#about">О проекте</a>
-                <a href="#missions">Миссии</a>
-                <a href="#volunteers">Волонтёры</a>
-                <a href="#future">Будущее</a>
-                <a href="#join" class="nav-button">Присоединиться ↗</a>
-            </nav>
-
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">МОЛОДЁЖНЫЙ ЭКОЛОГИЧЕСКИЙ ПРОЕКТ</span>
+        <h1>Будущее Кыргызстана <span>в наших руках.</span></h1>
+        <p class="hero-description">
+          Каким станет Кыргызстан к 2050 году?
+          Зависит ли наше будущее от решений, которые мы принимаем сегодня?
+          Давайте исследовать проблемы и искать решения вместе.
+        </p>
+        <div class="hero-buttons">
+          <a class="button button-primary" href="#problems">Изучить проблемы <span>↗</span></a>
+          <a class="button button-outline" href="#actions">Начать с себя</a>
         </div>
-    </header>
-
-
-    <main>
-
-        <!-- ГЛАВНЫЙ ЭКРАН -->
-        <section class="hero" id="home">
-            <div class="container hero-grid">
-
-                <div class="hero-content">
-                    <span class="eyebrow">
-                        🌍 МОЛОДЁЖНАЯ ЭКОИНИЦИАТИВА
-                    </span>
-
-                    <h1>
-                        Кыргызстан.<br>
-                        <span>Наше будущее</span><br>
-                        начинается сегодня.
-                    </h1>
-
-                    <p class="hero-description">
-                        Мы — поколение, которое может изменить будущее.
-                        Объединяем подростков, создаём экологические
-                        решения и мечтаем о чистом, зелёном Кыргызстане
-                        к 2050 году.
-                    </p>
-
-                    <div class="hero-actions">
-                        <a href="#missions" class="button button-primary">
-                            Начать с малого ↗
-                        </a>
-
-                        <a href="#about" class="button button-secondary">
-                            Узнать о проекте
-                        </a>
-                    </div>
-
-                    <div class="hero-note">
-                        <span class="online-dot"></span>
-                        Идеи подростков. Действия сегодня. Будущее завтра.
-                    </div>
-                </div>
-
-
-                <!-- ИЛЛЮСТРАЦИЯ ГЛАВНОГО ЭКРАНА -->
-                <div class="hero-visual" aria-label="Иллюстрация экологического будущего Кыргызстана">
-
-                    <div class="visual-sun"></div>
-
-                    <div class="floating-label label-top">
-                        ♻️ Меньше отходов
-                    </div>
-
-                    <div class="floating-label label-side">
-                        💧 Чистая вода
-                    </div>
-
-                    <div class="mountain mountain-back"></div>
-                    <div class="mountain mountain-front"></div>
-
-                    <div class="hero-earth">
-                        <div class="earth-land land-one"></div>
-                        <div class="earth-land land-two"></div>
-                        <div class="earth-face">🌿</div>
-                    </div>
-
-                    <div class="hero-characters">
-                        <div class="hero-character character-one">
-                            <span class="character-emoji">👧🏻</span>
-                            <span class="character-caption">Мечтать</span>
-                        </div>
-
-                        <div class="hero-character character-two">
-                            <span class="character-emoji">👦🏻</span>
-                            <span class="character-caption">Действовать</span>
-                        </div>
-
-                        <div class="hero-character character-three">
-                            <span class="character-emoji">👩🏽</span>
-                            <span class="character-caption">Объединять</span>
-                        </div>
-                    </div>
-
-                    <div class="visual-caption">
-                        <span>🌱</span>
-                        <div>
-                            <strong>Будущее в наших руках</strong>
-                            <small>Каждый маленький шаг имеет значение</small>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- КРАТКО О ПРОЕКТЕ -->
-        <section class="section about-section" id="about">
-            <div class="container">
-
-                <div class="section-heading">
-                    <span class="eyebrow">01 / НАША ИДЕЯ</span>
-
-                    <h2>
-                        Не просто говорить.<br>
-                        <span>Создавать изменения.</span>
-                    </h2>
-
-                    <p>
-                        «Кыргызстан — 2050» — молодёжная экологическая
-                        инициатива о том, каким мы хотим видеть будущее
-                        своей страны и что можем сделать уже сегодня.
-                    </p>
-                </div>
-
-                <div class="about-grid">
-
-                    <article class="info-card">
-                        <div class="card-icon">🏔️</div>
-                        <h3>Наша страна</h3>
-                        <p>
-                            Сохранять горы, озёра, реки и природное
-                            богатство Кыргызстана.
-                        </p>
-                    </article>
-
-                    <article class="info-card">
-                        <div class="card-icon">🧠</div>
-                        <h3>Наши идеи</h3>
-                        <p>
-                            Изучать проблемы, предлагать решения
-                            и использовать технологии с пользой.
-                        </p>
-                    </article>
-
-                    <article class="info-card">
-                        <div class="card-icon">🤝</div>
-                        <h3>Наши действия</h3>
-                        <p>
-                            Объединять подростков и превращать
-                            хорошие идеи в реальные инициативы.
-                        </p>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ЭКОЛОГИЧЕСКИЕ НАПРАВЛЕНИЯ -->
-        <section class="section missions-section" id="missions">
-            <div class="container">
-
-                <div class="section-heading">
-                    <span class="eyebrow">02 / НАШИ НАПРАВЛЕНИЯ</span>
-
-                    <h2>
-                        Четыре направления.<br>
-                        <span>Одна большая цель.</span>
-                    </h2>
-
-                    <p>
-                        Выбирай направление, изучай проблему
-                        и находи свой способ помочь Кыргызстану.
-                    </p>
-                </div>
-
-                <div class="missions-grid">
-
-                    <article class="mission-card water-card">
-                        <div class="mission-top">
-                            <span class="mission-number">01</span>
-                            <span class="mission-icon">💧</span>
-                        </div>
-
-                        <h3>Чистая вода</h3>
-
-                        <p>
-                            Как беречь водные ресурсы и сохранять
-                            чистоту рек и озёр?
-                        </p>
-
-                        <a href="#action-plan" class="text-link">
-                            Найти решение ↗
-                        </a>
-                    </article>
-
-
-                    <article class="mission-card nature-card">
-                        <div class="mission-top">
-                            <span class="mission-number">02</span>
-                            <span class="mission-icon">🌳</span>
-                        </div>
-
-                        <h3>Природа без мусора</h3>
-
-                        <p>
-                            Как уменьшить количество отходов,
-                            сортировать мусор и повторно использовать вещи?
-                        </p>
-
-                        <a href="#action-plan" class="text-link">
-                            Найти решение ↗
-                        </a>
-                    </article>
-
-
-                    <article class="mission-card energy-card">
-                        <div class="mission-top">
-                            <span class="mission-number">03</span>
-                            <span class="mission-icon">☀️</span>
-                        </div>
-
-                        <h3>Чистая энергия</h3>
-
-                        <p>
-                            Как экономить электричество и развивать
-                            экологичные технологии?
-                        </p>
-
-                        <a href="#action-plan" class="text-link">
-                            Найти решение ↗
-                        </a>
-                    </article>
-
-
-                    <article class="mission-card future-card">
-                        <div class="mission-top">
-                            <span class="mission-number">04</span>
-                            <span class="mission-icon">🌾</span>
-                        </div>
-
-                        <h3>Умное будущее</h3>
-
-                        <p>
-                            Как соединить образование, технологии,
-                            сельское хозяйство и заботу о природе?
-                        </p>
-
-                        <a href="#future" class="text-link">
-                            Найти решение ↗
-                        </a>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ВОЛОНТЁРЫ -->
-        <section class="section volunteers-section" id="volunteers">
-            <div class="container">
-
-                <div class="volunteers-heading">
-                    <div class="section-heading">
-                        <span class="eyebrow">03 / НАШЕ ПОКОЛЕНИЕ</span>
-
-                        <h2>
-                            Знакомься с<br>
-                            <span>эко-командой!</span>
-                        </h2>
-
-                        <p>
-                            Подростки могут исследовать экологические
-                            проблемы, делиться идеями и работать вместе.
-                        </p>
-                    </div>
-
-                    <span class="age-label">ВОЗРАСТ 12–16 ЛЕТ</span>
-                </div>
-
-
-                <!--
-                    Это демонстрационные персонажи.
-                    Их имена и описания можно заменить на данные
-                    реальных участников только с их разрешения.
-                -->
-
-                <div class="volunteers-grid">
-
-                    <article class="volunteer-card">
-                        <div class="avatar avatar-green">👧🏻</div>
-                        <span class="volunteer-role">ЭКО-ИДЕИ</span>
-                        <h3>Тамина</h3>
-                        <p>Любит природу и придумывает новые идеи.</p>
-                        <span class="volunteer-age">Персонаж · 14 лет</span>
-                    </article>
-
-                    <article class="volunteer-card">
-                        <div class="avatar avatar-blue">👦🏻</div>
-                        <span class="volunteer-role">ТЕХНОЛОГИИ</span>
-                        <h3>Рамазан</h3>
-                        <p>Интересуется программированием и инновациями.</p>
-                        <span class="volunteer-age">Персонаж · 13 лет</span>
-                    </article>
-
-                    <article class="volunteer-card">
-                        <div class="avatar avatar-yellow">👧🏽</div>
-                        <span class="volunteer-role">ВОДА И ПРИРОДА</span>
-                        <h3>Нурзада</h3>
-                        <p>Изучает природу и заботится о чистоте.</p>
-                        <span class="volunteer-age">Персонаж · 13 лет</span>
-                    </article>
-
-                    <article class="volunteer-card">
-                        <div class="avatar avatar-purple">👦🏽</div>
-                        <span class="volunteer-role">КОМАНДНАЯ РАБОТА</span>
-                        <h3>Нуриман</h3>
-                        <p>Помогает объединять людей вокруг полезных дел.</p>
-                        <span class="volunteer-age">Персонаж · 16 лет</span>
-                    </article>
-
-                </div>
-
-                <p class="volunteer-disclaimer">
-                    Персонажи вымышленные и представляют подростков,
-                    которые могут присоединиться к экологическим инициативам.
-                </p>
-
-            </div>
-        </section>
-
-
-        <!-- ИНТЕРАКТИВНЫЙ ПЛАН ДЕЙСТВИЙ -->
-        <section class="section action-section" id="action-plan">
-            <div class="container action-grid">
-
-                <div class="action-intro">
-                    <span class="eyebrow">04 / НАЧНИ С СЕБЯ</span>
-
-                    <h2>
-                        Маленькие шаги.<br>
-                        <span>Большие изменения.</span>
-                    </h2>
-
-                    <p>
-                        Будущее строится из ежедневных решений.
-                        Отметь экологические действия, которые
-                        ты уже выполняешь или хочешь попробовать.
-                    </p>
-
-                    <div class="action-decoration">
-                        🌱 Каждый шаг важен!
-                    </div>
-                </div>
-
-
-                <div class="checklist-card">
-                    <div class="checklist-header">
-                        <div>
-                            <h3>Моя эко-миссия</h3>
-                            <p>Личный план полезных привычек</p>
-                        </div>
-
-                        <span class="checklist-icon">🌍</span>
-                    </div>
-
-                    <div class="progress-info">
-                        <span>Мой прогресс</span>
-                        <strong id="progressText">0 из 5</strong>
-                    </div>
-
-                    <div class="progress-track">
-                        <div class="progress-bar" id="progressBar"></div>
-                    </div>
-
-                    <div class="checklist" id="checklist">
-
-                        <label class="checklist-item">
-                            <input type="checkbox" value="1">
-                            <span class="custom-check"></span>
-                            <span>Не оставлять мусор на природе</span>
-                        </label>
-
-                        <label class="checklist-item">
-                            <input type="checkbox" value="2">
-                            <span class="custom-check"></span>
-                            <span>Экономить воду и электричество</span>
-                        </label>
-
-                        <label class="checklist-item">
-                            <input type="checkbox" value="3">
-                            <span class="custom-check"></span>
-                            <span>Использовать многоразовую бутылку</span>
-                        </label>
-
-                        <label class="checklist-item">
-                            <input type="checkbox" value="4">
-                            <span class="custom-check"></span>
-                            <span>Узнать, где принимают вторсырьё</span>
-                        </label>
-
-                        <label class="checklist-item">
-                            <input type="checkbox" value="5">
-                            <span class="custom-check"></span>
-                            <span>Рассказать другу об экопривычках</span>
-                        </label>
-
-                    </div>
-
-                    <p class="checklist-message" id="checklistMessage"
-                       aria-live="polite">
-                        Начни с одного полезного действия!
-                    </p>
-
-                    <button class="reset-button" id="resetChecklist" type="button">
-                        Сбросить отметки ↺
-                    </button>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- ВИДЕНИЕ БУДУЩЕГО -->
-        <section class="section future-section" id="future">
-            <div class="container future-content">
-
-                <span class="eyebrow">05 / НАШ ВЗГЛЯД В БУДУЩЕЕ</span>
-
-                <h2>
-                    Каким будет<br>
-                    <span>Кыргызстан в 2050 году?</span>
-                </h2>
-
-                <p>
-                    Представь города с чистым воздухом, сохранённые
-                    водные ресурсы, современные технологии и людей,
-                    которые заботятся о своей стране.
-                </p>
-
-                <div class="future-pill-list">
-                    <span>🌿 Чистая окружающая среда</span>
-                    <span>💧 Сохранённые водные ресурсы</span>
-                    <span>⚡ Умная энергетика</span>
-                    <span>💡 Образование и инновации</span>
-                </div>
-
-                <a href="#join" class="button button-light">
-                    Я тоже хочу внести вклад ↗
-                </a>
-
-                <p class="future-note">
-                    Это наше видение желаемого будущего, а не прогноз.
-                    Его достижение зависит от решений и действий людей.
-                </p>
-
-            </div>
-        </section>
-
-
-        <!-- АВТОРСТВО И ПРИСОЕДИНЕНИЕ -->
-        <section class="section join-section" id="join">
-            <div class="container join-card">
-
-                <div class="join-illustration" aria-hidden="true">
-                    🌎
-                    <span>🌱</span>
-                    <span>✨</span>
-                </div>
-
-                <div class="join-content">
-                    <span class="eyebrow">06 / ТВОЯ ИДЕЯ ТОЖЕ ВАЖНА</span>
-
-                    <h2>
-                        Будущее не создаётся<br>
-                        <span>само по себе.</span>
-                    </h2>
-
-                    <p>
-                        Предложи экологическую идею, обсуди её с учителем
-                        или одноклассниками и начни с небольшого шага.
-                    </p>
-
-                    <a class="button button-primary"
-                       href="mailto:">
-                        Поделиться идеей ↗
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- ОБ АВТОРСТВЕ ПРОЕКТА -->
-        <section class="section project-credit">
-            <div class="container credit-content">
-
-                <span class="credit-icon">💚</span>
-
-                <span class="eyebrow">ЧЬЯ ЭТО ИДЕЯ?</span>
-
-                <h2>Кыргызстан — 2050</h2>
-
-                <p>
-                    Школьный экологический проект о будущем нашей страны,
-                    созданный для привлечения внимания к экологии,
-                    ответственности и инициативам молодёжи.
-                </p>
-
-                <p class="credit-author">
-                    Авторство и разработка: школьная команда проекта.
-                </p>
-
-                <p class="credit-note">
-                    Здесь можно указать настоящих авторов и участников,
-                    которые внесли вклад в разработку проекта.
-                </p>
-
-            </div>
-        </section>
-
-    </main>
-
-
-    <!-- ПОДВАЛ -->
-    <footer class="footer">
-        <div class="container footer-content">
-
-            <a href="#home" class="logo footer-logo">
-                <span class="logo-icon">🌱</span>
-                <span>
-                    <strong>КЫРГЫЗСТАН</strong>
-                    <small>2050 · ECO PROJECT</small>
-                </span>
-            </a>
-
+        <div class="hero-note">
+          <span class="note-dot"></span>
+          Природа — наше наследие. Её будущее зависит от нас.
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Горный пейзаж Кыргызстана">
+        <img
+          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85"
+          alt="Величественные горы, напоминающие горные пейзажи Кыргызстана"
+          fetchpriority="high">
+        <div class="visual-label">
+          <span>⛰️</span>
+          <div><strong>Наш Кыргызстан</strong><small>Природа, которую важно сохранить</small></div>
+        </div>
+        <div class="floating-leaf leaf-one">🌱</div>
+        <div class="floating-leaf leaf-two">💧</div>
+      </div>
+
+      <div class="hero-bottom">
+        <span>ВОДА</span><span>ПРИРОДА</span><span>ЧИСТЫЙ ВОЗДУХ</span><span>БУДУЩЕЕ</span>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="section-heading">
+        <span class="section-label">01 / О ПРОЕКТЕ</span>
+        <h2>Почему мы говорим о <span>2050 годе?</span></h2>
+        <p>
+          2050 год — это не далёкая фантастика. Это будущее, в котором
+          сегодняшние школьники будут работать, создавать семьи,
+          разрабатывать технологии и принимать решения.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-photo">
+          <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85"
+            alt="Природный ландшафт с горами и зелёными долинами"
+            loading="lazy">
+          <div class="photo-caption">Природа — основа жизни</div>
+        </div>
+        <div class="about-copy">
+          <h3>Наш главный вопрос</h3>
+          <p class="question">
+            «Что мы можем сделать сегодня, чтобы Кыргызстан в 2050 году
+            оставался красивой, здоровой и процветающей страной?»
+          </p>
+          <p>
+            Кыргызстан богат горами, ледниками, реками, озёрами,
+            пастбищами и уникальными природными территориями.
+            Они поддерживают жизнь людей, сельское хозяйство,
+            энергетику и туризм.
+          </p>
+          <p>
+            Однако изменение климата, загрязнение воздуха, накопление
+            отходов и деградация земель создают серьёзные вызовы.
+            Решать их нужно совместно: государству, бизнесу,
+            учёным, местным сообществам и каждому из нас.
+          </p>
+          <div class="quote-card">
+            <span>❝</span>
+            <p>Забота о природе — это забота о людях, экономике и будущем страны.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section facts-section">
+      <div class="section-heading">
+        <span class="section-label">02 / ФАКТЫ И ИССЛЕДОВАНИЯ</span>
+        <h2>Экология в цифрах</h2>
+        <p>
+          Несколько показателей помогают понять масштаб экологических
+          вызовов. У каждого показателя есть свой период и источник.
+        </p>
+      </div>
+
+      <div class="facts-grid">
+        <article class="fact-card">
+          <span class="fact-icon">🌡️</span>
+          <strong class="fact-number">+1,2 °C</strong>
+          <h3>Потепление климата</h3>
+          <p>
+            По данным UNEP, среднегодовая температура в Кыргызстане
+            повысилась примерно на 1,2 °C в период с 1960 по 2023 год.
+          </p>
+          <a href="https://www.unep.org/" target="_blank" rel="noopener noreferrer">Источник: UNEP ↗</a>
+        </article>
+        <article class="fact-card">
+          <span class="fact-icon">🌱</span>
+          <strong class="fact-number">Около 70%</strong>
+          <h3>Деградация пастбищ</h3>
+          <p>
+            В материалах UNEP около 70% пастбищ страны оцениваются
+            как деградировавшие. Это подчёркивает важность
+            устойчивого использования земель.
+          </p>
+          <a href="https://www.unep.org/" target="_blank" rel="noopener noreferrer">Источник: UNEP ↗</a>
+        </article>
+        <article class="fact-card">
+          <span class="fact-icon">🌫️</span>
+          <strong class="fact-number">PM2.5</strong>
+          <h3>Качество воздуха</h3>
+          <p>
+            Мелкие частицы PM2.5 могут проникать глубоко в дыхательную
+            систему. В Бишкеке загрязнение воздуха — важная проблема
+            общественного здоровья, особенно зимой.
+          </p>
+          <a href="https://www.who.int/" target="_blank" rel="noopener noreferrer">Источник: ВОЗ ↗</a>
+        </article>
+        <article class="fact-card">
+          <span class="fact-icon">📉</span>
+          <strong class="fact-number">2050</strong>
+          <h3>Риски для экономики</h3>
+          <p>
+            Климатические изменения могут повлиять на сельское хозяйство,
+            инфраструктуру, водные ресурсы и экономический рост.
+            Заблаговременная подготовка помогает уменьшать риски.
+          </p>
+          <a href="https://www.worldbank.org/" target="_blank" rel="noopener noreferrer">Источник: Всемирный банк ↗</a>
+        </article>
+      </div>
+      <p class="small-note">
+        Примечание: показатели приведены для общего ознакомления.
+        Перед публикацией в научном отчёте следует сверить их с конкретной
+        страницей источника и проверить методику расчёта.
+      </p>
+    </section>
+
+    <section class="section problems-section" id="problems">
+      <div class="section-heading">
+        <span class="section-label">03 / ЧТО ПОД УГРОЗОЙ?</span>
+        <h2>Шесть вызовов для <span>нашего будущего</span></h2>
+        <p>
+          Экологические проблемы связаны между собой.
+          Изменение климата влияет на воду и сельское хозяйство,
+          загрязнение — на здоровье, а деградация земель — на экосистемы
+          и благополучие людей.
+        </p>
+      </div>
+
+      <div class="problem-grid">
+        <article class="problem-card">
+          <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=850&q=80"
+            alt="Река среди природного ландшафта" loading="lazy">
+          <div class="problem-content">
+            <span class="card-number">01 / ВОДА</span>
+            <h3>Ледники и водные ресурсы</h3>
             <p>
-                Создаём осознанное будущее вместе.
+              Ледники и снег питают реки. Потепление меняет скорость таяния,
+              сезонность стока и риски для водоснабжения.
             </p>
+            <h4>Что может произойти без действий?</h4>
+            <ul>
+              <li>В отдельные сезоны может усиливаться нехватка воды.</li>
+              <li>Орошение полей может стать сложнее.</li>
+              <li>Возрастут требования к управлению водными ресурсами.</li>
+            </ul>
+            <div class="solution"><b>Что поможет:</b> ремонт каналов, сокращение утечек, водосберегающее орошение и защита водосборных территорий.</div>
+          </div>
+        </article>
 
-            <a href="#home" class="back-to-top">
-                Наверх ↑
-            </a>
+        <article class="problem-card">
+          <img src="https://images.unsplash.com/photo-1605600659873-d808a13e4d9a?auto=format&fit=crop&w=850&q=80"
+            alt="Пластиковые отходы, требующие правильной утилизации" loading="lazy">
+          <div class="problem-content">
+            <span class="card-number">02 / ОТХОДЫ</span>
+            <h3>Мусор и пластик</h3>
+            <p>
+              Неправильно выброшенные отходы могут попадать в реки,
+              на пастбища и в природные зоны. Некоторые материалы
+              сохраняются в окружающей среде очень долго.
+            </p>
+            <h4>Что может произойти без действий?</h4>
+            <ul>
+              <li>Загрязнение почвы и водоёмов.</li>
+              <li>Риски для животных, которые сталкиваются с отходами.</li>
+              <li>Увеличение нагрузки на полигоны и городские службы.</li>
+            </ul>
+            <div class="solution"><b>Что поможет:</b> меньше одноразовых вещей, повторное использование, раздельный сбор и доступная переработка.</div>
+          </div>
+        </article>
 
+        <article class="problem-card">
+          <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=850&q=80"
+            alt="Лесная экосистема" loading="lazy">
+          <div class="problem-content">
+            <span class="card-number">03 / ПРИРОДА</span>
+            <h3>Леса и биоразнообразие</h3>
+            <p>
+              Природные территории являются домом для растений,
+              птиц и животных. Здоровые экосистемы помогают поддерживать
+              почву, воду и природное равновесие.
+            </p>
+            <h4>Что может произойти без действий?</h4>
+            <ul>
+              <li>Некоторые виды могут терять места обитания.</li>
+              <li>Повреждение растительного покрова усиливает эрозию.</li>
+              <li>Снижается устойчивость отдельных экосистем.</li>
+            </ul>
+            <div class="solution"><b>Что поможет:</b> охрана природных территорий, восстановление местных растений и ответственное отношение к дикой природе.</div>
+          </div>
+        </article>
+
+        <article class="problem-card">
+          <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=850&q=80"
+            alt="Вода и волны" loading="lazy">
+          <div class="problem-content">
+            <span class="card-number">04 / ВОЗДУХ</span>
+            <h3>Загрязнение воздуха</h3>
+            <p>
+              На качество воздуха могут влиять отопление, транспорт,
+              промышленные выбросы и пыль. Загрязнение особенно важно
+              учитывать в густонаселённых районах.
+            </p>
+            <h4>Что может произойти без действий?</h4>
+            <ul>
+              <li>Увеличивается воздействие мелких частиц на людей.</li>
+              <li>Возрастает риск заболеваний дыхательной системы.</li>
+              <li>Ухудшается комфорт городской жизни.</li>
+            </ul>
+            <div class="solution"><b>Что поможет:</b> более чистое отопление, общественный транспорт, контроль выбросов и мониторинг качества воздуха.</div>
+          </div>
+        </article>
+
+        <article class="problem-card">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=850&q=80"
+            alt="Зелёные сельскохозяйственные поля" loading="lazy">
+          <div class="problem-content">
+            <span class="card-number">05 / ЗЕМЛЯ</span>
+            <h3>Почва и сельское хозяйство</h3>
+            <p>
+              Фермерство зависит от плодородной почвы, воды,
+              погоды и состояния пастбищ. Засухи и эрозия
+              могут усложнять выращивание продуктов.
+            </p>
+            <h4>Что может произойти без действий?</h4>
+            <ul>
+              <li>В неблагоприятные годы урожай может снижаться.</li>
+              <li>Фермерам потребуется больше ресурсов для восстановления земель.</li>
+              <li>Деградация пастбищ осложняет содержание скота.</li>
+            </ul>
+            <div class="solution"><b>Что поможет:</b> устойчивое орошение, восстановление почв, разумное использование пастбищ и научные методы земледелия.</div>
+          </div>
+        </article>
+
+        <article class="problem-card">
+          <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=850&q=80"
+            alt="Энергетическая инфраструктура" loading="lazy">
+          <div class="problem-content">
+            <span class="card-number">06 / ЭКОНОМИКА</span>
+            <h3>Энергия и развитие</h3>
+            <p>
+              Энергетика, транспорт, здания и промышленность должны
+              развиваться с учётом экологических рисков и потребностей
+              будущих поколений.
+            </p>
+            <h4>Что может произойти без действий?</h4>
+            <ul>
+              <li>Экстремальные погодные явления могут повреждать инфраструктуру.</li>
+              <li>Устранение экологического ущерба потребует ресурсов.</li>
+              <li>Уязвимые отрасли могут сталкиваться с дополнительными рисками.</li>
+            </ul>
+            <div class="solution"><b>Что поможет:</b> энергоэффективность, чистые технологии, устойчивые здания и подготовка специалистов.</div>
+          </div>
+        </article>
+      </div>
+      <p class="small-note">
+        Перечисленные последствия являются возможными рисками, а не
+        гарантированными событиями для каждого района Кыргызстана.
+        Масштаб последствий зависит от климата, инфраструктуры и действий людей.
+      </p>
+    </section>
+
+    <section class="section glacier-section">
+      <div class="glacier-image">
+        <img src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1200&q=85"
+          alt="Снежные горные вершины" loading="lazy">
+      </div>
+      <div class="glacier-copy">
+        <span class="section-label">ОСОБЕННО ВАЖНО ДЛЯ КЫРГЫЗСТАНА</span>
+        <h2>Горы — это не только красота. Это источник жизни.</h2>
+        <p>
+          Горные ледники и снежный покров влияют на речной сток.
+          Вода необходима для питья, сельского хозяйства,
+          экосистем и производства электроэнергии.
+        </p>
+        <p>
+          Потепление не означает, что все реки сразу исчезнут.
+          Но оно меняет состояние ледников и сезонность поступления
+          воды, поэтому важно заранее оценивать риски и планировать
+          использование ресурсов.
+        </p>
+        <div class="glacier-takeaway">
+          <strong>Наш вывод</strong>
+          <p>Сохранение воды начинается с науки, планирования и разумного использования каждого ресурса.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section future-section" id="future">
+      <div class="section-heading">
+        <span class="section-label">04 / ВЗГЛЯД В БУДУЩЕЕ</span>
+        <h2>Два возможных сценария <span>Кыргызстана — 2050</span></h2>
+        <p>
+          Мы не можем знать будущее точно. Но можем оценивать риски,
+          принимать решения и создавать более благоприятные условия.
+        </p>
+      </div>
+
+      <div class="future-grid">
+        <article class="future-card future-risk">
+          <div class="future-icon">⚠️</div>
+          <span class="future-label">СЦЕНАРИЙ 1</span>
+          <h3>Если откладывать решения</h3>
+          <p>Экологические проблемы могут становиться дороже и сложнее.</p>
+          <ul>
+            <li>Больше рисков для водоснабжения в отдельных регионах.</li>
+            <li>Продолжение накопления отходов там, где нет эффективной системы обращения с ними.</li>
+            <li>Уязвимость сельского хозяйства к засухам и деградации земель.</li>
+            <li>Дополнительные расходы на защиту инфраструктуры от природных опасностей.</li>
+            <li>Сложности с сохранением отдельных природных территорий.</li>
+          </ul>
+        </article>
+
+        <article class="future-card future-positive">
+          <div class="future-icon">🌿</div>
+          <span class="future-label">СЦЕНАРИЙ 2</span>
+          <h3>Если действовать сегодня</h3>
+          <p>Планомерные действия могут повысить устойчивость страны.</p>
+          <ul>
+            <li>Более эффективное использование воды и защита водных ресурсов.</li>
+            <li>Развитие раздельного сбора и переработки там, где это возможно.</li>
+            <li>Чище воздух благодаря улучшению отопления и транспорта.</li>
+            <li>Устойчивые методы сельского хозяйства и восстановление земель.</li>
+            <li>Новые возможности для инженеров, учёных и экологических предпринимателей.</li>
+          </ul>
+        </article>
+      </div>
+      <p class="scenario-disclaimer">
+        Это иллюстрация возможных направлений, а не точный прогноз.
+        Результат зависит от инвестиций, технологий, решений и участия общества.
+      </p>
+    </section>
+
+    <section class="section solutions-section">
+      <div class="section-heading">
+        <span class="section-label">05 / РЕШЕНИЯ</span>
+        <h2>Как сделать будущее устойчивее?</h2>
+        <p>
+          Одного действия недостаточно. Нужна система, в которой
+          экологические знания превращаются в практические решения.
+        </p>
+      </div>
+
+      <div class="solutions-grid">
+        <article class="solution-card">
+          <span>💧</span>
+          <h3>Сохранять воду</h3>
+          <p>Снижать утечки, модернизировать каналы, развивать эффективное орошение и защищать водосборные территории.</p>
+        </article>
+        <article class="solution-card">
+          <span>♻️</span>
+          <h3>Менять систему отходов</h3>
+          <p>Сокращать ненужную упаковку, повторно использовать вещи и создавать удобные системы сбора и переработки.</p>
+        </article>
+        <article class="solution-card">
+          <span>🌬️</span>
+          <h3>Улучшать воздух</h3>
+          <p>Развивать чистое отопление, общественный транспорт и мониторинг загрязнения.</p>
+        </article>
+        <article class="solution-card">
+          <span>🌾</span>
+          <h3>Защищать землю</h3>
+          <p>Восстанавливать почвы, правильно использовать пастбища и внедрять устойчивые методы земледелия.</p>
+        </article>
+        <article class="solution-card">
+          <span>🔬</span>
+          <h3>Развивать науку</h3>
+          <p>Измерять экологические показатели, изучать местные проблемы и проверять решения на практике.</p>
+        </article>
+        <article class="solution-card">
+          <span>💡</span>
+          <h3>Создавать технологии</h3>
+          <p>Разрабатывать энергоэффективные здания, чистые технологии и цифровые инструменты для экологических задач.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section action-section" id="actions">
+      <div class="action-layout">
+        <div class="action-copy">
+          <span class="section-label">06 / НАЧНИ С СЕБЯ</span>
+          <h2>Маленькие шаги. <span>Большая цель.</span></h2>
+          <p>
+            Школьники не должны решать все проблемы в одиночку.
+            Но мы можем изучать свою среду, предлагать идеи,
+            объединяться и показывать, какие изменения работают.
+          </p>
+          <div class="action-photo">
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1000&q=85"
+              alt="Зелёные растения как символ заботы о природе" loading="lazy">
+          </div>
         </div>
 
-        <div class="footer-bottom">
-            <p>© 2026 · Кыргызстан — 2050 · Школьная экологическая инициатива</p>
+        <div class="checklist-panel">
+          <div class="checklist-heading">
+            <span class="checklist-symbol">✓</span>
+            <div><h3>Мой экологический план</h3><p>Отметь действия, которые готов(а) попробовать.</p></div>
+          </div>
+          <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+          <p id="progressText" class="progress-text" aria-live="polite">Выполнено: 0 из 7</p>
+
+          <div id="checklist" class="checklist">
+            <label class="check-item"><input type="checkbox"><span>Экономить воду и сообщать об утечках.</span></label>
+            <label class="check-item"><input type="checkbox"><span>Использовать многоразовую бутылку или сумку.</span></label>
+            <label class="check-item"><input type="checkbox"><span>Не оставлять мусор в природе.</span></label>
+            <label class="check-item"><input type="checkbox"><span>Узнать, что можно сдавать на переработку в моём городе.</span></label>
+            <label class="check-item"><input type="checkbox"><span>Бережно относиться к электричеству и теплу.</span></label>
+            <label class="check-item"><input type="checkbox"><span>Изучить одну экологическую проблему своего района.</span></label>
+            <label class="check-item"><input type="checkbox"><span>Предложить экологическую идею школе или сообществу.</span></label>
+          </div>
+
+          <p id="checklistMessage" class="checklist-message" aria-live="polite"></p>
+          <button class="button button-primary reset-button" id="resetChecklist" type="button">Начать заново ↺</button>
+          <p class="small-note">Этот список — личный план. Он не измеряет реальный экологический эффект действий.</p>
         </div>
-    </footer>
+      </div>
+    </section>
 
+    <section class="section youth-section">
+      <div class="section-heading">
+        <span class="section-label">07 / ГОЛОС МОЛОДЁЖИ</span>
+        <h2>У будущего есть <span>наше поколение</span></h2>
+        <p>
+          Школьники могут становиться исследователями, инженерами,
+          экологами, программистами и авторами полезных инициатив.
+          Важно не только говорить о проблеме, но и проверять решения.
+        </p>
+      </div>
+      <div class="youth-grid">
+        <article class="youth-card">
+          <div class="youth-illustration">👩🏻‍🔬</div>
+          <h3>Изучать</h3>
+          <p>Собирать данные, читать исследования и задавать вопросы.</p>
+        </article>
+        <article class="youth-card">
+          <div class="youth-illustration">👨🏻‍💻</div>
+          <h3>Разрабатывать</h3>
+          <p>Создавать сайты, карты, приложения и другие полезные инструменты.</p>
+        </article>
+        <article class="youth-card">
+          <div class="youth-illustration">🤝</div>
+          <h3>Объединяться</h3>
+          <p>Работать с одноклассниками, учителями и местными сообществами.</p>
+        </article>
+      </div>
+      <p class="small-note">
+        Персонажи в этом разделе — условные иллюстрации, а не реальные
+        участники проекта или подтверждённые волонтёры.
+      </p>
+    </section>
 
-    <!-- ИНТЕРАКТИВНОСТЬ -->
-    <script src="script.js"></script>
+    <section class="closing-banner">
+      <div class="closing-content">
+        <span class="section-label">КЫРГЫЗСТАН — 2050</span>
+        <h2>Какую страну мы оставим следующему поколению?</h2>
+        <p>
+          Будущее начинается не в 2050 году. Оно начинается с решений,
+          которые мы принимаем сегодня.
+        </p>
+        <a class="button button-light" href="#about">Вернуться к проекту ↑</a>
+      </div>
+      <div class="closing-decoration">⛰️ 🌱 💧</div>
+    </section>
 
+    <section class="section sources-section" id="sources">
+      <div class="section-heading">
+        <span class="section-label">08 / ИСТОЧНИКИ</span>
+        <h2>Изучай. Проверяй. Действуй.</h2>
+        <p>
+          Для экологического проекта важно опираться на данные,
+          проверять даты и отличать факты от прогнозов.
+        </p>
+      </div>
+      <div class="sources-list">
+        <a href="https://www.unep.org/" target="_blank" rel="noopener noreferrer">
+          <span class="source-icon">🌍</span>
+          <span><strong>Программа ООН по окружающей среде (UNEP)</strong><small>Климат, экосистемы и экологические исследования</small></span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a href="https://www.worldbank.org/en/country/kyrgyzrepublic" target="_blank" rel="noopener noreferrer">
+          <span class="source-icon">📊</span>
+          <span><strong>Всемирный банк — Кыргызстан</strong><small>Климатические риски, экономика и устойчивое развитие</small></span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a href="https://www.who.int/" target="_blank" rel="noopener noreferrer">
+          <span class="source-icon">🫁</span>
+          <span><strong>Всемирная организация здравоохранения</strong><small>Загрязнение воздуха и здоровье</small></span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a href="https://www.stat.gov.kg/ru/" target="_blank" rel="noopener noreferrer">
+          <span class="source-icon">📈</span>
+          <span><strong>Национальный статистический комитет КР</strong><small>Официальная статистика Кыргызстана</small></span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a href="https://www.ipcc.ch/" target="_blank" rel="noopener noreferrer">
+          <span class="source-icon">🔬</span>
+          <span><strong>Межправительственная группа экспертов по изменению климата (IPCC)</strong><small>Научные оценки изменения климата</small></span>
+          <span class="source-arrow">↗</span>
+        </a>
+      </div>
+      <p class="small-note">
+        Фотографии загружаются с Unsplash и используются как иллюстрации
+        природы и экологических тем. Они не обязательно изображают
+        конкретные места Кыргызстана. Для точного визуального представления
+        страны замените их собственными фотографиями или проверенными
+        снимками кыргызских гор, Иссык-Куля, рек и пастбищ.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home">
+      <span class="brand-icon">🌿</span>
+      <span>КЫРГЫЗСТАН <b>2050</b></span>
+    </a>
+    <p>Экологическое будущее начинается с осознанных решений.</p>
+    <p class="author">Разработала: <strong>Тамина Амангельдыева</strong></p>
+    <p class="footer-bottom">© <span id="currentYear">2026</span> Кыргызстан — 2050 · Молодёжный экологический проект</p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Наверх">↑</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
