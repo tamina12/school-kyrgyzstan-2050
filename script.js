@@ -1,82 +1,221 @@
 
-const menuToggle = document.getElementById('menuToggle');
-const navLinks = document.getElementById('navLinks');
+/* =========================================
+   КЫРГЫЗСТАН — 2050
+   Interactive Eco Project
+   ========================================= */
 
-// Мобильное меню
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('active');
+document.addEventListener("DOMContentLoaded", () => {
 
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-    menuToggle.setAttribute(
-      'aria-label',
-      isOpen ? 'Закрыть меню' : 'Открыть меню'
+    // 1. МОБИЛЬНОЕ МЕНЮ
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navigation = document.getElementById("navigation");
+
+    if (menuToggle && navigation) {
+
+        function closeMenu() {
+            navigation.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Открыть меню");
+            menuToggle.textContent = "☰";
+        }
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = navigation.classList.toggle("active");
+
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Закрыть меню" : "Открыть меню"
+            );
+
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+        });
+
+        // Закрываем меню после выбора раздела
+        navigation.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", closeMenu);
+        });
+
+        // Закрываем меню при нажатии Escape
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeMenu();
+            }
+        });
+
+        // При переходе на большой экран закрываем мобильное меню
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 760) {
+                closeMenu();
+            }
+        });
+    }
+
+
+    // 2. ЭКО-МИССИЯ И ПОДСЧЁТ ПРОГРЕССА
+
+    const checklist = document.getElementById("checklist");
+    const progressText = document.getElementById("progressText");
+    const progressBar = document.getElementById("progressBar");
+    const checklistMessage = document.getElementById("checklistMessage");
+    const resetButton = document.getElementById("resetChecklist");
+
+    if (
+        checklist &&
+        progressText &&
+        progressBar &&
+        checklistMessage &&
+        resetButton
+    ) {
+
+        const checkboxes = Array.from(
+            checklist.querySelectorAll('input[type="checkbox"]')
+        );
+
+        const totalTasks = checkboxes.length;
+
+        function updateProgress() {
+            const completedTasks = checkboxes.filter(
+                (checkbox) => checkbox.checked
+            ).length;
+
+            const percentage = totalTasks === 0
+                ? 0
+                : (completedTasks / totalTasks) * 100;
+
+            progressText.textContent =
+                `${completedTasks} из ${totalTasks}`;
+
+            progressBar.style.width = `${percentage}%`;
+
+            // Доступное описание прогресса для вспомогательных технологий
+            progressBar.setAttribute("role", "progressbar");
+            progressBar.setAttribute("aria-valuemin", "0");
+            progressBar.setAttribute("aria-valuemax", "100");
+            progressBar.setAttribute(
+                "aria-valuenow",
+                String(Math.round(percentage))
+            );
+
+            if (completedTasks === 0) {
+                checklistMessage.textContent =
+                    "Начни с одного полезного действия!";
+            } else if (completedTasks < 3) {
+                checklistMessage.textContent =
+                    "Отличное начало! Каждый шаг имеет значение 🌱";
+            } else if (completedTasks < totalTasks) {
+                checklistMessage.textContent =
+                    "Здорово! Ты уже выполнил несколько эко-миссий 💚";
+            } else {
+                checklistMessage.textContent =
+                    "Все миссии отмечены! Ты молодец — продолжай заботиться о природе! 🌍";
+            }
+        }
+
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener("change", updateProgress);
+        });
+
+        // Сбрасываем отметки
+        resetButton.addEventListener("click", () => {
+            checkboxes.forEach((checkbox) => {
+                checkbox.checked = false;
+            });
+
+            updateProgress();
+        });
+
+        // Начальное состояние
+        updateProgress();
+    }
+
+
+    // 3. ПЛАВНАЯ НАВИГАЦИЯ ПО СТРАНИЦЕ
+
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+            const targetId = link.getAttribute("href");
+
+            if (!targetId || targetId === "#") {
+                return;
+            }
+
+            const target = document.querySelector(targetId);
+
+            if (target) {
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: window.matchMedia(
+                        "(prefers-reduced-motion: reduce)"
+                    ).matches ? "auto" : "smooth",
+                    block: "start"
+                });
+
+                // Обновляем адрес страницы без перезагрузки
+                if (window.location.hash !== targetId) {
+                    history.replaceState(null, "", targetId);
+                }
+            }
+        });
+    });
+
+
+    // 4. ЛЁГКОЕ ПОЯВЛЕНИЕ КАРТОЧЕК ПРИ ПРОКРУТКЕ
+
+    const animatedCards = document.querySelectorAll(
+        ".info-card, .mission-card, .volunteer-card"
     );
-    menuToggle.textContent = isOpen ? '✕' : '☰';
-  });
 
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.setAttribute('aria-label', 'Открыть меню');
-      menuToggle.textContent = '☰';
-    });
-  });
-}
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
 
-// Раскрытие карточек
-document.querySelectorAll('.resource-card').forEach(card => {
-  const button = card.querySelector('.learn-more');
+    if ("IntersectionObserver" in window && !reducedMotion) {
 
-  if (!button) return;
+        const observer = new IntersectionObserver(
+            (entries, currentObserver) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        currentObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.12
+            }
+        );
 
-  button.addEventListener('click', () => {
-    const isOpen = card.classList.toggle('open');
+        animatedCards.forEach((card) => {
+            card.classList.add("reveal-card");
+            observer.observe(card);
+        });
+    } else {
+        animatedCards.forEach((card) => {
+            card.classList.add("is-visible");
+        });
+    }
 
-    button.setAttribute('aria-expanded', String(isOpen));
-    button.textContent = isOpen ? 'Скрыть −' : 'Узнать больше +';
-  });
+
+    // 5. ТЕКУЩИЙ ГОД В ПОДВАЛЕ
+
+    const footerText = document.querySelector(".footer-bottom p");
+
+    if (footerText) {
+        const currentYear = new Date().getFullYear();
+
+        footerText.textContent =
+            `© ${currentYear} · Кыргызстан — 2050 · Школьная экологическая инициатива`;
+    }
+
+
+    // 6. СООБЩЕНИЕ В КОНСОЛИ
+
+    console.log(
+        "🌱 Кыргызстан — 2050: сайт загружен. Начинаем создавать будущее!"
+    );
+
 });
 
-// Интерактивный экологический план
-const checkboxes = document.querySelectorAll('.eco-check');
-const progressText = document.getElementById('progressText');
-const progressBar = document.getElementById('progressBar');
-const progressTrack = document.getElementById('progressTrack');
-const resetButton = document.getElementById('resetChecks');
-
-function updateProgress() {
-  const total = checkboxes.length;
-  const completed = document.querySelectorAll('.eco-check:checked').length;
-  const percentage = total ? (completed / total) * 100 : 0;
-
-  if (progressText) {
-    progressText.textContent =
-      `Выполнено: ${completed} из ${total} действий`;
-  }
-
-  if (progressBar) {
-    progressBar.style.width = `${percentage}%`;
-  }
-
-  if (progressTrack) {
-    progressTrack.setAttribute('aria-valuenow', String(completed));
-  }
-}
-
-checkboxes.forEach(checkbox => {
-  checkbox.addEventListener('change', updateProgress);
-});
-
-if (resetButton) {
-  resetButton.addEventListener('click', () => {
-    checkboxes.forEach(checkbox => {
-      checkbox.checked = false;
-    });
-
-    updateProgress();
-  });
-}
-
-updateProgress();
